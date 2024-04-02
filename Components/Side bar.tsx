@@ -2,6 +2,10 @@
 
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
+import { HiHome } from "react-icon/hi"
+import { BiSearch } from "react-icon/bi";
+
+import Box from "./Box";
 
 interface SidebarProps {
     children: React.ReactNode;
@@ -14,6 +18,7 @@ interface SidebarProps {
 
     const routes = useMemo (() =>[
         {
+            icon:HiHome,
             label:'Home',
             active: Pathname !== '/search',
             href:'/',
@@ -28,8 +33,8 @@ interface SidebarProps {
     
     return (
         <div className="flex h-full">
-            <div>
-            ClassName="
+            <div
+            className="
             hidden
             md:flex
             flex-col
@@ -40,7 +45,27 @@ interface SidebarProps {
             p-2
         "
     >
+        <Box>
+            <div
+            className="
+            flex
+            flex-col
+            gap-y-4
+            px-4
+            "
+        >
+            {routes.map((item) => (
+                <sidebarItem    'SideBarItem' 
+            ))}
+            <div>
+
+            </div>
             <Box>
+                SideBar Naviagation 
+                </Box>
+                <Box> className="overflow-y-auto h-full">
+                    Song Library
+                    </Box>
                 <div>
                     ClassName="
                     flex
@@ -50,7 +75,7 @@ interface SidebarProps {
                     "
                 >
                     {routes.map((items) => (
-                        
+
                     )
                     )
 
