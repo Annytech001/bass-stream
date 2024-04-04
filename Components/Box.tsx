@@ -18,7 +18,8 @@ const Box: React.FC<BoxProps> =({
                 w-full',
             
             className
-            )}>
+            )}
+            >
             {children}
         </div>
     );
