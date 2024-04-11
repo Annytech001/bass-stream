@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
-import { SideBarItem } from "./SideBarItem";
+import SidebarItem from "./SideBarItem";
 import Box from "./Box";
 
 interface SidebarProps {
@@ -61,8 +61,12 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
             ))}
           </div>
         </Box>
-        <Box className="overflow-y-auto h-full">Song Library</Box>
+        <Box className="overflow-y-auto h-full">
+          Song Library
+          </Box>
       </div>
+      <main className= "h-full flex-1 overflow-auto py-2">
+      </main>
     </div>
   );
 };
