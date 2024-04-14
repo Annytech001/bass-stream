@@ -25,12 +25,10 @@ const Library = () => {
                 "
             >
                
-
-
-                <TbPlaylist className="text-neutral-300" size={26} />
+                <TbPlaylist className="text-neutral-500" size={22} />
                 <p
                     className="
-                    text-neutral-300
+                    text-neutral-500
                     font-medium
                     text-md
                     "
@@ -38,7 +36,25 @@ const Library = () => {
                     Your Library
                     </p>
                     </div>
-                
+                    <AiOutlinePlus
+                    onclick={onClick}
+                    size={18}
+                    className="
+                    text-neutral-500
+                    censor-pointer
+                    hover:text-white
+                    transition
+                    "  
+                        />
+            </div>
+            <div classname="
+                flex
+                flex-col
+                gap-y-2
+                mt-4
+                px-3
+            ">
+                list of songs!
             </div>
         </div>
     );
