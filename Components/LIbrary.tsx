@@ -37,7 +37,7 @@ const Library = () => {
                     </p>
                     </div>
                     <AiOutlinePlus
-                    onclick={onClick}
+                    onClick={onClick}
                     size={18}
                     className="
                     text-neutral-500
@@ -47,7 +47,7 @@ const Library = () => {
                     "  
                         />
             </div>
-            <div classname="
+            <div className="
                 flex
                 flex-col
                 gap-y-2
