@@ -123,7 +123,15 @@ interface HeaderProps {
 
                     <>
                     <div>
-                        <Button />
+                        <Button
+                        className="
+                        bg-transparent
+                        text-neutral-300
+                        font-medium
+                        "
+                        >
+                            Sign up 
+                        </Button>
                     </div>
                     </>
                 </div>
