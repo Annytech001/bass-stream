@@ -124,18 +124,32 @@ interface HeaderProps {
                     <>
                     <div>
                         <Button
+                        onClick={() => {}}
                         className="
                         bg-transparent
                         text-neutral-300
                         font-medium
                         "
                         >
-                            Sign up 
+                            Sign Up  
+                        </Button>
+                    </div>
+                    <div>
+                        <Button
+                        onClick={() => {}}
+                        className="
+                        bg-white
+                        'px-6'
+                        'px-2'
+                        "
+                        >
+                            Login 
                         </Button>
                     </div>
                     </>
                 </div>
                 </div>
+                {children}
             </div>
         );
     }
