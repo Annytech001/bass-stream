@@ -23,8 +23,7 @@ const onClick = () => {
 }
 
     return (
-        <button
-        onClick= {onclick}
+        <button onClick = {onclick}
             className="
             relative
             group
@@ -36,8 +35,8 @@ const onClick = () => {
             bg-neutral-100/10
             hover:bg neutral-100/20
             pr-4
-            "
-        >
+            ">
+
             <div className=" 
             relative 
             min-h-[64px]
