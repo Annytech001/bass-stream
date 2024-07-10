@@ -22,3 +22,5 @@ return (
     </SessionContextProvider>
 )
 }
+
+export default SupabaseProvider;
