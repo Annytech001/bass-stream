@@ -51,5 +51,4 @@ export interface Subcription {
     trial_start?: string;
     trial_end?: string;
     price?:
-
 }
