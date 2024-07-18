@@ -55,9 +55,11 @@ export const MyUsercontextProvider = (props: Props) => {
                     if (userDetailsPromise.status ==="fulfilled") {
                         setUserDetails(userDetailsPromise.value.data as UserDetails);
                     }
+
                     if (subscriptionPromise.status === "fulfilled") {
                         setSubscription(subscriptionPromise.value.data as Subscription);
                     }
+
                     setIsloadingData(false);
                 } 
                 );
@@ -66,6 +68,7 @@ export const MyUsercontextProvider = (props: Props) => {
                 setSubscription(null);
             }
         }, [user, isLoadingData]);
+
         const value = {
             accessToken, 
             user,
@@ -73,5 +76,14 @@ export const MyUsercontextProvider = (props: Props) => {
             isLoading: isLoadingUser || isLoadingData,
             subscription
         };
+
         return<UserContext.Provider value={value} {...props} />
+    };
+
+    export const useUser = () => {
+        const context = (UserContext);
+        if (context === undefined) {
+            throw new Error ('useUser must be used within a MyUserContextProvider');
+        }
+        return context;     
     };
