@@ -57,7 +57,7 @@ export const MyUsercontextProvider = (props: Props) => {
                     }
 
                     if (subscriptionPromise.status === "fulfilled") {
-                        setSubscription(subscriptionPromise.value.data as Subscription);
+                        setSubscription(subscriptionPromise.value.data as Subcription);
                     }
 
                     setIsloadingData(false);
@@ -67,6 +67,7 @@ export const MyUsercontextProvider = (props: Props) => {
                 setUserDetails(null);
                 setSubscription(null);
             }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         }, [user, isLoadingData]);
 
         const value = {
@@ -87,3 +88,7 @@ export const MyUsercontextProvider = (props: Props) => {
         }
         return context;     
     };
+function useEffect(arg0: () => void, arg1: (boolean | User | null)[]) {
+    throw new Error("Function not implemented.");
+}
+
